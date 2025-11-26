@@ -1,0 +1,687 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: #e2e0e0;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem 3.0rem;
+    background: linear-gradient(90deg, rgba(60, 45, 45, 0.95) 100%, rgba(10,10,10,0) 0%);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+.header-logo {
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #ff4757;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: radial-gradient(ellipse at center, #000000 0%, #0a0a0a 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 48%, #ff4757 49%, #ff4757 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, #ff4757 49%, #ff4757 51%, transparent 52%);
+    background-size: 100px 100px;
+    opacity: 0.03;
+    animation: bgMove 20s linear infinite;
+}
+
+@keyframes bgMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ffffff 0%, #ff4757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1.2rem 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    align-items: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff4757 0%, #ff6348 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(255, 71, 87, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 71, 87, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+}
+
+/* Stats Section: Removed .stats-grid and .stat-card styles as they are unused */
+.stats-section {
+    padding: 6rem 3rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+
+.about-section {
+    padding: 6rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 2;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.features-section {
+    padding: 6rem 3rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.features-section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.feature-card {
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid #ff4757;
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    background: rgba(255, 71, 87, 0.1);
+    transform: translateX(10px);
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feature-card p {
+    opacity: 0.8;
+    line-height: 1.8;
+}
+
+.cta-section {
+    padding: 8rem 3rem;
+    text-align: center;
+    background: radial-gradient(ellipse at center, #ff4757 0%, #0a0a0a 70%);
+}
+
+.cta-section h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.cta-section p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Footer Style */
+footer {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.footer-message {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    color: #ffffff;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ff4757;
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* Schedule Section Styles */
+/* .stats-section#schedule は冗長なので削除し、.schedule-sectionとして使用 */
+.schedule-section {
+    padding: 6rem 3rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+.schedule-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.schedule-sub-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+/* 4-5月のスケジュール見出しにも適用 */
+.schedule-container > p.schedule-sub-title {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    opacity: 0.8;
+}
+
+
+.schedule-sub-title-4month,
+.schedule-sub-title-5month {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #fdd700;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Schedule Card Base */
+.schedule-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Primary Cards (Accent BG) */
+.schedule-card.is-primary {
+    background: rgba(255, 71, 87, 0.1);
+    border-left: 5px solid transparent;
+}
+.schedule-card.is-primary:hover {
+    background: rgba(255, 71, 87, 0.2);
+    border-left-color: #ff4757;
+}
+
+
+/* Light Cards (Default BG) */
+.schedule-card.is-light {
+    background: rgba(255, 255, 255, 0.05); 
+    border-left: 5px solid transparent;
+}
+.schedule-card.is-light:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-left-color: #ff4757;
+}
+
+/* Warning Card (Deadline) */
+.schedule-card.is-warning {
+    background-color: #ff4757;
+    color: #0a0a0a !important;
+    border: 2px solid #ffffff;
+}
+.schedule-card.is-warning .card-title,
+.schedule-card.is-warning .card-subtitle,
+.schedule-card.is-warning .card-desc {
+    color: #ffffff !important; 
+}
+.schedule-card.is-warning .schedule-tag.is-white {
+    background-color: #000000;
+    color: #ff4757;
+}
+
+/* Border Only Card (Weekly Practice) */
+.schedule-card.is-border-only {
+    background: transparent;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+.schedule-card.is-border-only:hover {
+    transform: none;
+    background: rgba(255, 71, 87, 0.03);
+}
+
+/* Card Content Styling */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #ffffff;
+}
+.card-title-small {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #ffffff;
+}
+.card-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+.card-subtitle-small {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+.card-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Tags Styling */
+.schedule-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
+
+.schedule-tag.is-warning { background-color: #ff9800; color: #0a0a0a; }
+.schedule-tag.is-info { background-color: #3498db; color: #ffffff; }
+.schedule-tag.is-success { background-color: #2ecc71; color: #ffffff; }
+.schedule-tag.is-danger { background-color: #e74c3c; color: #ffffff; }
+.schedule-tag.is-accent { background-color: #ff4757; color: #ffffff; }
+.schedule-tag.is-white { background-color: #ffffff; color: #ff4757; }
+
+/* Footer Note */
+.schedule-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.schedule-footer .footer-note {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Alumni Section Styles */
+.alumni-section {
+    padding: 6rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alumni-section .section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.alumni-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.alumni-card:hover {
+    background: rgba(255, 71, 87, 0.1);
+    border-color: #ff4757;
+    transform: translateY(-5px);
+}
+
+.alumni-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 1.5rem;
+    border: 4px solid #ff4757;
+    display: block;
+}
+
+.alumni-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: #ff4757;
+}
+
+.alumni-quote {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.alumni-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+    
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero .tagline {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    h2 {
+        font-size: 2.5rem !important;
+    }
+
+    .alumni-section .section-title {
+        font-size: 2.5rem !important;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    /* Schedule Section Adjustments */
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+    .schedule-sub-title {
+        font-size: 2rem;
+    }
+    .schedule-sub-title-4month,
+    .schedule-sub-title-5month {
+        font-size: 1.5rem;
+    }
+
+    /* Hamburger Button Styles */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+        margin-left: auto;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #ffffff;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+        
+    }
+
+    /* Hamburger to X Animation */
+    .hamburger.is-active span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .hamburger.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.is-active span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+    
+    /* Open Menu List Styles */
+    #menu-list.is-open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #0a0a0a;
+        padding: 100px 3rem 3rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 999;
+        list-style: none;
+    }
+
+    #menu-list.is-open li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1rem;
+    }
+
+    #menu-list.is-open a {
+        font-size: 1.5rem;
+    }
+    
+    .header-logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+a:link,
+a:visited {
+    color: #ff4757;             /* リンクの基本色を赤系の色に指定 */
+    text-decoration: none;      /* 下線を消す */
+    transition: color 0.3s;     /* 色が変化する際に0.3秒かけて滑らかに変化させる */
+}
