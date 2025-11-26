@@ -678,10 +678,3 @@ footer {
         display: none;
     }
 }
-
-a:link,
-a:visited {
-    color: #ff4757;             /* リンクの基本色を赤系の色に指定 */
-    text-decoration: none;      /* 下線を消す */
-    transition: color 0.3s;     /* 色が変化する際に0.3秒かけて滑らかに変化させる */
-}
