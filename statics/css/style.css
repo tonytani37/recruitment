@@ -79,7 +79,7 @@ nav a:hover {
     justify-content: center;
     position: relative;
     /* background: radial-gradient(ellipse at center, #000000 0%, #0a0a0a 100%); */
-    background-image: url('statics/img/top_img.webp'); /* 👈 ファイルパスをあなたの画像に置き換えてください */
+    background-image: url('../img/top_img.webp'); /* 👈 ファイルパスをあなたの画像に置き換えてください */
     background-size: cover;          /* セクション全体を覆うように画像を拡大・縮小 */
     background-position: center;     /* 画像を中央に配置 */
     background-repeat: no-repeat;    /* 画像の繰り返しを禁止 */
