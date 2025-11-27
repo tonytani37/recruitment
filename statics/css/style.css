@@ -78,7 +78,11 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: radial-gradient(ellipse at center, #000000 0%, #0a0a0a 100%);
+    /* background: radial-gradient(ellipse at center, #000000 0%, #0a0a0a 100%); */
+    background-image: url('/statics/img/top_img.webp'); /* 👈 ファイルパスをあなたの画像に置き換えてください */
+    background-size: cover;          /* セクション全体を覆うように画像を拡大・縮小 */
+    background-position: center;     /* 画像を中央に配置 */
+    background-repeat: no-repeat;    /* 画像の繰り返しを禁止 */
     overflow: hidden;
 }
 
@@ -87,12 +91,12 @@ nav a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: 
-        linear-gradient(45deg, transparent 48%, #ff4757 49%, #ff4757 51%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, #ff4757 49%, #ff4757 51%, transparent 52%);
-    background-size: 100px 100px;
-    opacity: 0.03;
-    animation: bgMove 20s linear infinite;
+    background-color:#1e1e1e; 
+        /* linear-gradient(45deg, transparent 48%, #ff4757 49%, #ff4757 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, #ff4757 49%, #ff4757 51%, transparent 52%); */
+    background-size: 200px 200px;
+    opacity: 0.6;
+    /* animation: bgMove 20s linear infinite; */
 }
 
 @keyframes bgMove {
@@ -135,6 +139,14 @@ nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 3rem;
     font-weight: 300;
+    letter-spacing: 0.15em;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.hero .topline {
+    font-size: 2.0rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
     letter-spacing: 0.15em;
     animation: fadeInUp 1s ease-out 0.2s backwards;
 }
