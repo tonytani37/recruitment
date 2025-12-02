@@ -12,7 +12,8 @@ body {
 }
 
 header {
-    position: fixed;
+    position: sticky; 
+    top: 0;          
     width: 100%;
     padding: 1.5rem 3.0rem;
     background: linear-gradient(90deg, rgba(60, 45, 45, 0.95) 100%, rgba(10,10,10,0) 0%);
@@ -20,6 +21,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* 🌟 トップバナー画像 🌟 */
+.top-banner-image {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    /* padding: 1rem 0; */
+    background-color: #0a0a0a;
 }
 
 .logo {
