@@ -165,9 +165,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ただし流用、改修、公開、運営全般に関して発生した問題については一切責任を負いません。
 
-本プロジェクトは MITライセンス の下で公開しています。
+本プロジェクトは GNU General Public License v3.0 の下で公開しています。
 
 2025年12月3日 2版
+2026年1月21日 3版（ライセンス変更 MIT -> GPL v3.0）
 
 ---
 
